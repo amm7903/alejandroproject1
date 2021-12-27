@@ -1,25 +1,70 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';    
+import NavBar from './NavBar';
+import { Routes, Route } from "react-router-dom";
+import Home from './Home'
+import Mission from './Mission'
+import UpcomingJoga from './UpcomingJoga'
+import PreviousTrips from './PreviousTrips.js'
+import SignedPlayer from './SignedPlayer'
+import LoginPage from './LoginPage'
+import SignUp from './SignUp';
+import Players from './Players';
+import { useEffect, useState } from 'react';
+import TeamContainer from './TeamContainer';
 
-function App() {
+export default function App() {
+  const [user, setUser] = useState(false)
+  const [teams, setTeams] = useState([])
+  const [players, setPlayers] = useState([])
+    
+  useEffect(() => {
+fetch("/teams")
+.then(response => response.json()) 
+.then(data => setTeams(data))
+}, [])
+
+// useEffect(() => {
+//   fetch("/players")
+//   .then(response => response.json()) 
+//   .then(data => setPlayers(data))
+//   }, [])
+
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user)
+        )
+      }
+    });
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className='intro'>
+     <NavBar user={user} setUser={setUser} />
+     <Routes>
+        <Route path="/home" element={<Home />}/>
+        <Route path="/mission" element={<Mission />}/>
+        <Route path="/upcomingtrips" element={<UpcomingJoga />} />
+      <Route path="/previoustrips" element={<PreviousTrips/>} />
+      <Route path="/signedplayers" element={<SignedPlayer />} />
+      <Route path="/loginpage" element={<LoginPage setUser={setUser} />} />
+      <Route path="/signup" element={<SignUp setUser={setUser}/>} />
+      <Route path="/players" element={<Players />}/>
+      <Route path="/teamcontainer" element={<TeamContainer teams={teams} user={user}/>}> </Route>
+      <Route
+      path="*"
+      element={
+        <main style={{ padding: "1rem" }}>
+          <p>There's nothing here!</p>
+        </main>
+      }
+    />
+      </Routes>
+     
     </div>
-  );
-}
 
-export default App;
+
+  )}
