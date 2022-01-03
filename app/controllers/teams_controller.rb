@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    skip_before_action :authorize, only: [:index]
+    skip_before_action :authorize, only: [:index, :create, :destroy, :show]
 
     def show
         team = Team.find(params[:id])
@@ -16,10 +16,16 @@ class TeamsController < ApplicationController
         render json: team, status: :created 
     end
 
+    def destroy
+        team = Team.find(params[:id])
+        team.destroy
+        head :no_content
+    end
+
     private 
 
     def team_params
-        Team.permit(:name)
+        params.permit(:name)
     end
 
     def render_not_found_response

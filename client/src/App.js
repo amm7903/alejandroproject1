@@ -17,7 +17,8 @@ import TeamContainer from './TeamContainer';
 export default function App() {
   const [user, setUser] = useState(false)
   const [teams, setTeams] = useState([])
-  const [players, setPlayers] = useState([])
+
+  // const [players, setPlayers] = useState([])
     
   useEffect(() => {
 fetch("/teams")
@@ -39,7 +40,7 @@ fetch("/teams")
       }
     });
   },[])
-
+  
   return (
     
     <div className='intro'>
@@ -53,7 +54,7 @@ fetch("/teams")
       <Route path="/loginpage" element={<LoginPage setUser={setUser} />} />
       <Route path="/signup" element={<SignUp setUser={setUser}/>} />
       <Route path="/players" element={<Players />}/>
-      <Route path="/teamcontainer" element={<TeamContainer teams={teams} user={user}/>}> </Route>
+      <Route path="/teamcontainer" element={<TeamContainer teams={teams} setTeams={setTeams}/>}> </Route>
       <Route
       path="*"
       element={
@@ -63,7 +64,6 @@ fetch("/teams")
       }
     />
       </Routes>
-     
     </div>
 
 

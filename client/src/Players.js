@@ -12,19 +12,12 @@ useEffect(() => {
       .then(data => setPlayers(data))
      }, [])
 
-// let displayPlayers = players.map(player => {
-//     return (
-//       <PlayerCard players={player} key={player.id} />
-//     )   })
-    
   return (
-        // <div>
-        //     <h1> {displayPlayers} </h1>
-        // </div>
+     
         <div>
 {players.map((player) => (
                 
-                <PlayerCard player={player} key={player.id} />
+                <PlayerCard players={players} player={player} key={player.id} setPlayers={setPlayers}/>
             ))}
         </div>
         )}

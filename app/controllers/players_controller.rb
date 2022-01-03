@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    skip_before_action :authorize, only: [:index]
+    skip_before_action :authorize, only: [:index, :destroy, :show]
 
 
     def show 
@@ -32,7 +32,7 @@ class PlayersController < ApplicationController
     private
     
     def player_params
-        Player.permit(:name, :goals, :assists, :clubs, :details, :team_id)
+        params.permit(:name, :goals, :assists, :clubs, :details, :team_id)
     end
 
     def render_not_found_response
