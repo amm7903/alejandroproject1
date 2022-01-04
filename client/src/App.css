@@ -22,6 +22,44 @@
 /* .intro {
     background-color: black;
 } */
-.card2 {
+/* .card2 {
     background-color: white;
-}
+} */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    border-collapse: collapse;
+    background-color: #ffffff
+  }
+  
+  table {
+    border-collapse: collapse; 
+    border-spacing: 15px; 
+    width: 100%;
+    padding: 8px;
+    background-color: black
+    
+  }
+
+  
+  th,
+  td {
+    border: 100px solid #7c4040;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+  }
+  
+  th {
+    background-color: rgb(117, 201, 250);
+    
+  }
+  
+  td {
+    background-color: rgb(205, 235, 253);
+  }
+  
+ 

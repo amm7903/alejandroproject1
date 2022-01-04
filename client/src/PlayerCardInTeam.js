@@ -1,11 +1,10 @@
 import React from 'react'
-import TeamCard from './TeamCard'
 
-export default function PlayerCardInTeam({player, goals, assists, playerId, setPlayers}) {
+export default function PlayerCardInTeam({playerName, goals, assists, setPlayers,player}) {
 
     
-function handleDelete(id) {
-        fetch(`/players/${playerId}`, {
+function handleDelete() {
+        fetch(`/players/${player.id}`, {
             method: 'DELETE',
         }).then((r) => {
             if (r.ok) {
@@ -15,13 +14,13 @@ function handleDelete(id) {
                        return onePlayer.id !== player.id
                    })
                })
-                alert("player deleted!")
+                alert("player deleted yoo!")
             }
         })
     }
      return (
         <div className='PlayerInTeam'>
-            <p>{player}</p>
+            <p>{playerName}</p>
            <p> {goals}</p>
            <p>{assists}</p>
             <button onClick={handleDelete}> Delete </button>

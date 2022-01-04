@@ -12,12 +12,33 @@ useEffect(() => {
       .then(data => setPlayers(data))
      }, [])
 
+// function onUpdatePlayer(updatedPlayer){
+//     const updatedPlayer = players.map(
+//         player => {
+//             if (player.id === updatedPlayer.id) {
+//                 return updatedPlayer
+//             } else {return player}
+//         }
+//     )
+//     setPlayers(updatedPlayer)
+// }
+function onUpdateCustomer(updatedPlayer) {
+    const updatedPlayers = players.map(
+      playerOne => {
+        if (playerOne.id === updatedPlayer.id) {
+          return updatedPlayer
+        } else {return playerOne}
+      }
+    )
+    setPlayers(updatedPlayers)
+  }
+
   return (
      
         <div>
 {players.map((player) => (
                 
-                <PlayerCard players={players} player={player} key={player.id} setPlayers={setPlayers}/>
+                <PlayerCard players={players} player={player} key={player.id} setPlayers={setPlayers} onUpdateCustomer={onUpdateCustomer} />
             ))}
         </div>
         )}

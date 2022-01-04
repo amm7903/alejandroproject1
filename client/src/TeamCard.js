@@ -9,7 +9,6 @@ export default function TeamCard({team, setTeamToDisplay, setTeams, name, teamTo
         setTeamToDisplay("No Team Yet")
     }
 
-
     function handleDelete(){
         console.log("heyyy")
         fetch(`/teams/${team.id}`,{
@@ -26,18 +25,10 @@ export default function TeamCard({team, setTeamToDisplay, setTeams, name, teamTo
         })
     }
  return (
-    <div className='TeamCard'>
+<div className='TeamCard'>
     <h3> Team Name: {name} </h3>
     <button onClick={handleDelete}> Delete Team</button>
     <button onClick={handleClick}>Click to Display Team information</button>
-    <button onClick={hideTeamInfo}>hide Team Info</button>
-    {/* {team ? (
-        <button onClick={handleClick}> show team</button>
-    ) : (
-        <button onClick={handleClick}> hide team</button>
-    )}
-        </div>
-    )
-} */}
-</div>
+    <button onClick={hideTeamInfo}>Hide Team</button>
+ </div>
  )}

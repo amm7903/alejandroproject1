@@ -1,9 +1,32 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import EditPlayer from './EditPlayer'
 
-export default function PlayerCard({player, setPlayers, players}) {
+
+export default function PlayerCard({player, setPlayers, players, onUpdatePlayer}) {
    const [teams, setTeams] = useState([])
-  
+   const [statGoals,setStatGoals] = useState(player.goals)
+   const [statAssists, setStatAssists] = useState(player.assists)
+
+   const [isEditing, setIsEditing] = useState(false)
+   const []
+
+    function goalCounter(){
+        setStatGoals(statGoals + 1)
+    }
+
+    function goalMinusCounter(){
+        setStatGoals(statGoals - 1)
+    }
+
+    function assistCounter(){
+        setStatAssists(statAssists + 1)
+    }
+
+    function assistMinusCounter(){
+        setStatAssists(statAssists -1)
+    }
+
     useEffect(() => {
         fetch('/teams')
         .then(resp => resp.json())
@@ -29,16 +52,36 @@ export default function PlayerCard({player, setPlayers, players}) {
     }
 
     return (
-        <div>
-         {teams.map(team => (
-                <h5> {team.name} </h5>
+
+    <div className='app-container'>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th> Goals</th>
+                    <th> Assists </th>
+                    <th> Previous Clubs</th>
+                    <th> Progress</th>
+                    <th> Current Team</th>
+                    <th> Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td>{player.name}</td>
+            <td>{statGoals} <br/> <button onClick={goalCounter}>+</button><button onClick={goalMinusCounter}>-</button></td>
+            <td>{statAssists} <br/> <button onClick={assistCounter}>+</button><button onClick={assistMinusCounter}>-</button></td>
+            <td>{player.clubs}</td>
+            <td>{player.details}</td>
+            {teams.map(team => (
+                <td>{team.name}</td>
             ))}
-    <h6> {player.name} <button onClick={handleDelete}> delete</button></h6>
-        </div>
-    )
-}
- // setPlayers((players) =>
-                //     players.filter((player) => player.id !== id)
-                // );
-                // alert("player deleted!")
+            <td><button onClick={handleDelete}>delete</button></td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    );
+};
+ 
             

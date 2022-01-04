@@ -23,7 +23,7 @@ return (
     <AddPlayer setPlayers={setPlayers} teamToDisplay={teamToDisplay}/>
 {players.map(player => {
     return (
-    <PlayerCardInTeam key={player.id} player={player.name} goals={player.goals} assists={player.assists} setPlayers={setPlayers}  playerId={player.id}/>)
+    <PlayerCardInTeam key={player.id} player={player} playerName={player.name} goals={player.goals} assists={player.assists} setPlayers={setPlayers} />)
 })}
 
  </div>

@@ -30,6 +30,7 @@ export default function AddPlayer({setPlayers, teamToDisplay}) {
             "goals": e.target.goals.value,
             "assists": e.target.assists.value,
             "details": e.target.details.value,
+            "clubs": e.target.clubs.value,
             "team_id": teamToDisplay.id
 
         }),
@@ -43,14 +44,16 @@ export default function AddPlayer({setPlayers, teamToDisplay}) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label> Player Name</label>
+                <label> Name</label>
                 <input onChange={handleOnChange} value={formData.name} type='text' name="name"/>
                 <label> Goals </label>
                 <input onChange={handleOnChange} value={formData.goals} type='number' name="goals"/>
                 <label> Assists </label>
                 <input onChange={handleOnChange} value={formData.assists} type='number' name="assists"/>
-                <label> Player Progression</label>
+                <label> Progress</label>
                 <input onChange={handleOnChange} value={formData.details} type='text' name="details"/>
+                <label> Clubs</label>
+                <input onChange={handleOnChange} value={formData.clubs} type='text' name="clubs"/>
                 <input type='submit' />
             </form>
         </div>
