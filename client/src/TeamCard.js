@@ -27,8 +27,8 @@ export default function TeamCard({team, setTeamToDisplay, setTeams, name, teamTo
  return (
 <div className='TeamCard'>
     <h3> Team Name: {name} </h3>
-    <button onClick={handleDelete}> Delete Team</button>
-    <button onClick={handleClick}>Click to Display Team information</button>
-    <button onClick={hideTeamInfo}>Hide Team</button>
+    <button onClick={handleClick} type="button" className="btn btn-info">Display Team Info</button> {" "}
+    <button onClick={hideTeamInfo}type="button" className="btn btn-secondary"> Hide Team</button> {" "}
+    <button onClick={handleDelete} type="button" className="btn btn-danger">Delete Team</button> {" "}
  </div>
  )}

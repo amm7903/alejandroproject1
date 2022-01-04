@@ -22,7 +22,7 @@ useEffect(() => {
 //     )
 //     setPlayers(updatedPlayer)
 // }
-function onUpdateCustomer(updatedPlayer) {
+function onUpdatePlayer(updatedPlayer) {
     const updatedPlayers = players.map(
       playerOne => {
         if (playerOne.id === updatedPlayer.id) {
@@ -38,7 +38,7 @@ function onUpdateCustomer(updatedPlayer) {
         <div>
 {players.map((player) => (
                 
-                <PlayerCard players={players} player={player} key={player.id} setPlayers={setPlayers} onUpdateCustomer={onUpdateCustomer} />
+                <PlayerCard players={players} player={player} key={player.id} setPlayers={setPlayers} onUpdatePlayer={onUpdatePlayer} />
             ))}
         </div>
         )}

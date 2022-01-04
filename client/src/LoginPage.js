@@ -1,6 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate} from "react-router-dom";
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import Button from 'react-bootstrap/Button'
+
 
 export default function LoginPage({ setUser }) {
   let navigate = useNavigate();
@@ -31,17 +34,19 @@ export default function LoginPage({ setUser }) {
     fetch("/logout", {method: "DELETE"}).then((r) => {
       if (r.ok) {
         setUser(null)
-        navigate("/home")
+        navigate("/home");
+        alert("Logout Successful")
       }
     })
   }
 
   return (
     <div>
-      <button onClick={handleLogOut}> Logout </button>
+     {/* <Button>Test Button</Button> */}
+      {/* <Button onClick={handleLogOut}> Logout </Button> */}
       <form onSubmit={handleSubmit}>
-        <h1>Login</h1>
-        <label htmlFor="username">Username</label>
+        <p className="fs-1">Login</p>
+        <label htmlFor="username">Username: </label> {" "}
         <input
           type="text"
           id="username"
@@ -49,7 +54,7 @@ export default function LoginPage({ setUser }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Password:</label> {" "}
         <input
           type="password"
           id="password"
@@ -59,7 +64,8 @@ export default function LoginPage({ setUser }) {
         />
         <button type="submit">Login</button>
       </form>
-      
+      <p className="fs-1">Logout</p> {" "} 
+      <Button variant="secondary" onClick={handleLogOut}> Logout </Button>
     </div>
   )
 }

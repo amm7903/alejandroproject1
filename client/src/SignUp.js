@@ -28,8 +28,8 @@ export default function SignUp({setUser}) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
-        <label htmlFor="username">Username</label>
+            <p className="fs-1">Sign up</p>
+        <label htmlFor="username">Username:</label> {""}
         <input
           type="text"
           id="username"
@@ -37,7 +37,7 @@ export default function SignUp({setUser}) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Password:</label> {""}
         <input
           type="password"
           id="password"
@@ -45,7 +45,7 @@ export default function SignUp({setUser}) {
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
         />
-        <label htmlFor="password">Password Confirmation</label>
+        <label htmlFor="password">Password Confirmation:</label>{" "}
         <input
           type="password"
           id="password_confirmation"
