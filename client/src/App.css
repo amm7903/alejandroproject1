@@ -34,7 +34,7 @@
     border-collapse: collapse;
   }
   
-  table {
+  .playerTable {
     border-collapse: collapse; 
     border-spacing: 15px; 
     width: 100%;
@@ -58,10 +58,28 @@
     background-color: rgb(205, 235, 253);
   }
   
-  /* .TeamForm {
-text-align: center;
-  } */
+  .TeamForm {
+transform: translate(10px, 70px);
+  }
 
   .currentTeam{
     text-align: center;
   }
+
+  .TeamList{
+    transform: translate(10px, 50px);
+  }
+
+  .PlayerInTeam{
+    transform: translate(10px, 30px);
+  }
+  
+  .display-6{
+    transform: translate(22px);
+  }
+
+  /* .row {
+    padding: 2px; 
+    border-color: wheat;
+    border-style: solid;
+  } */

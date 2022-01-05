@@ -36,9 +36,10 @@ export default function TeamContainer({teams, setTeams}) {
   
     return (
         <div className='currentTeam'>
-            {teamToDisplay === 'No Team Yet' ? <p>Select a team from the list to see their players!</p> : <TeamInfo teamToDisplay={teamToDisplay} />}
+            {teamToDisplay === 'No Team Yet' ?  <h1 className="display-6">Select a team</h1> : <TeamInfo teamToDisplay={teamToDisplay} />}
   <TeamList teams={teams} setTeams={setTeams} setTeamToDisplay={setTeamToDisplay} teamToDisplay={teamToDisplay}/>
             <div className='TeamForm'>
+                <h3>Add Team</h3>
             <form onSubmit={handleSubmit}>
                 <label>Team Name:</label>
                 <input value={formData.name} onChange={handleOnChange} type='text' name="name" />

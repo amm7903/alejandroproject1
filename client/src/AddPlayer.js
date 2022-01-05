@@ -44,15 +44,15 @@ export default function AddPlayer({setPlayers, teamToDisplay}) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label> Name</label>
+                <label> Name:</label> {" "}
                 <input onChange={handleOnChange} value={formData.name} type='text' name="name"/>
-                <label> Goals </label>
+                <label> Goals: </label> {" "}
                 <input onChange={handleOnChange} value={formData.goals} type='number' name="goals"/>
-                <label> Assists </label>
+                <label> Assists: </label>{" "}
                 <input onChange={handleOnChange} value={formData.assists} type='number' name="assists"/>
-                <label> Progress</label>
+                <label> Progress:</label> {" "}
                 <input onChange={handleOnChange} value={formData.details} type='text' name="details"/>
-                <label> Clubs</label>
+                <label> Clubs:</label> {" "}
                 <input onChange={handleOnChange} value={formData.clubs} type='text' name="clubs"/>
                 <input type='submit' />
             </form>

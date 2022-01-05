@@ -14,20 +14,35 @@ function handleDelete() {
                        return onePlayer.id !== player.id
                    })
                })
-                alert("player deleted yoo!")
+                alert("player deleted!")
             }
         })
     }
+
      return (
         <div className='PlayerInTeam'>
+         
+         <tr>
+      <td scope="row">{playerName}</td>
+      <td>{goals}</td>
+      <td>{assists}</td>
+      <td><button onClick={handleDelete}>Delete</button></td>
+    </tr>
+    <tr></tr>
+         
+            {/* <div class="row">
+                <h6>{}</h6>
+  <div class="col-sm-3">Name: {playerName}</div>
+  <div class="col-sm-3">Goals: {goals}</div>
+  <div class="col-sm-3">Assists: {assists}</div>
+  <div class="col-sm-3">Actions: <button onClick={handleDelete}> Delete</button></div>
+</div> */}
+            {/* <h4>All Players </h4>
             <p>{playerName}</p>
-           <p> {goals}</p>
+           {goals}
            <p>{assists}</p>
-            <button onClick={handleDelete}> Delete </button>
+            <button onClick={handleDelete}> Delete </button> */}
+            
         </div>
     )
 }
-
-// setPlayers((players) =>
-                //     players.filter((player) => player.id !== player.id)
-                // );

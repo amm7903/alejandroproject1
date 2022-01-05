@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import PlayerCardTwo from './PlayerCardTwo'
 import EditPlayer from './EditPlayer'
 
@@ -89,7 +89,7 @@ export default function PlayerCard({player, setPlayers, players, onUpdatePlayer}
             handleChange={handleChange}
             handlePlayerUpdate={handlePlayerUpdate}
           />) : null}
-        <table>
+        <table className='playerTable'>
             <thead>
                 <tr>
                     {/* <th>ID</th> */}
