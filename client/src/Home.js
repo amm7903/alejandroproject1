@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import img2 from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/jogapic-modified.png'
 import img3 from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/proplayer1.png'
 import img4 from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/teampic.png'
-
+import team from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/teampic2.png'
 export default function Home() {
     return (
         <div>
@@ -18,6 +18,14 @@ export default function Home() {
           </div>
         </div>
         </div>
+
+      {/* new section team picture */}
+      <div className='teampic'>
+      <img src={team} class="img-fluid" alt="img-fluid" height="50px" width="800px"/>
+      </div>
+
+
+      {/* philosophy section */}
         
     </div>
         

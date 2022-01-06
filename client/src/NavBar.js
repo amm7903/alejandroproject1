@@ -12,7 +12,7 @@ export default function NavBar({user}) {
  |{" "} <Link to="/home" className="nav-link active" aria-current="page">Home</Link> |{" "}
   <Link to="/mission" className="nav-link active" aria-current="page" >Mission</Link> |{" "}
   <Link to="/upcomingtrips" className="nav-link active" aria-current="page" >Upcoming Trips</Link> |{" "}
-  <Link to="/previoustrips" className="nav-link active" aria-current="page" >Previous Trips</Link> |{" "}
+  {/* <Link to="/previoustrips" className="nav-link active" aria-current="page" >Previous Trips</Link> |{" "} */}
   <Link to="/signedplayers" className="nav-link active" aria-current="page"> Signed Players </Link> |{" "}
   <Link to="/staff" className="nav-link active" aria-current="page"> Staff </Link> |{" "}
   <Link to="/loginpage" className="nav-link active" aria-current="page"> Login </Link> |{" "}
