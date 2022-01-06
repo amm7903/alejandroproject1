@@ -19,24 +19,15 @@ return (
     <div className='teamInfo'>
     {/* <h2>Information about your Team:</h2> */}
     {/* <h3>Team Info for : {teamToDisplay.name}</h3> */}
-    <h1 className="display-6">Information about your team</h1>
-    <h1 className="display-3">Team info for {teamToDisplay.name}</h1>
+    <h2 className="display-6">Information about your team</h2>
+    <h1 className="display-3">{teamToDisplay.name}</h1>
     <h4>Add Players</h4>
     <AddPlayer setPlayers={setPlayers} teamToDisplay={teamToDisplay}/>
-    <table className='table table-hover' teamToDisplay={teamToDisplay}>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Goals</th>
-                <th>Assists</th>
-            </tr>
-        </thead>
-        <tbody>
+   
 {players.map(player => {
     return (
-    <PlayerCardInTeam key={player.id} player={player} playerName={player.name} goals={player.goals} assists={player.assists} setPlayers={setPlayers} />)
+    <PlayerCardInTeam key={player.id} player={player} playerName={player.name} goals={player.goals} assists={player.assists} setPlayers={setPlayers}/>)
 })}
-</tbody>
-</table>
+
  </div>
 )}

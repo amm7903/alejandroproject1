@@ -92,7 +92,7 @@ export default function PlayerCard({player, setPlayers, players, onUpdatePlayer}
         <table className='playerTable'>
             <thead>
                 <tr>
-                    {/* <th>ID</th> */}
+                     {/* <th>ID</th>  */}
                     <th>Name</th>
                     <th> Goals</th>
                     <th> Assists </th>

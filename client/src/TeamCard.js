@@ -1,13 +1,14 @@
 import React from 'react'
 
-export default function TeamCard({team, setTeamToDisplay, setTeams, name, teamToDisplay}) {
-
+export default function TeamCard({team, setTeamToDisplay, setTeams, name}) {
     function handleClick(){
-        setTeamToDisplay(team)
+        setTeamToDisplay(team) 
+        
     }
     function hideTeamInfo(){
         setTeamToDisplay("No Team Yet")
     }
+    
 
     function handleDelete(){
         console.log("heyyy")
@@ -26,7 +27,7 @@ export default function TeamCard({team, setTeamToDisplay, setTeams, name, teamTo
     }
  return (
 <div className='TeamCard'>
-    <h3> {name} </h3> 
+    <h3 className='tName'> {name} </h3> 
     <button onClick={handleClick} type="button" className="btn btn-info">Display Team Info</button> {" "}
     <button onClick={hideTeamInfo}type="button" className="btn btn-secondary"> Hide Team</button> {" "}
     <button onClick={handleDelete} type="button" className="btn btn-danger">Delete Team</button> {" "}

@@ -1,5 +1,5 @@
-puts "Deleting seed data"
-Team.destroy_all
+# puts "Deleting seed data"
+# Team.destroy_all
 # Team.reset_pk_sequence
 # Player.destroy_all
 # Player.reset_pk_sequence
@@ -13,6 +13,9 @@ Team.destroy_all
 # Player.create(name: "muller", goals: 6, assists: 4, clubs: "dortmund", details: "cooool", team_id: 2)
 
 
-Team.create(name: "Ajax")
-Team.create(name: "Chelsea")
+# Team.create(name: "Ajax")
+# Team.create(name: "Chelsea")
 
+puts "seeding users"
+User.create(username: "KephernF", password:"Keph1122", email:"kephernjoga@gmail.com", boss: true)
+puts "done seeding user"

@@ -21,28 +21,19 @@ function handleDelete() {
 
      return (
         <div className='PlayerInTeam'>
-         
-         <tr>
-      <td scope="row">{playerName}</td>
-      <td>{goals}</td>
-      <td>{assists}</td>
-      <td><button onClick={handleDelete}>Delete</button></td>
-    </tr>
-    <tr></tr>
-         
-            {/* <div class="row">
-                <h6>{}</h6>
-  <div class="col-sm-3">Name: {playerName}</div>
+        <div>
+        <div className='row2'>
+  {/* <div class="col-sm-3">Name: {playerName}</div>
   <div class="col-sm-3">Goals: {goals}</div>
   <div class="col-sm-3">Assists: {assists}</div>
-  <div class="col-sm-3">Actions: <button onClick={handleDelete}> Delete</button></div>
-</div> */}
-            {/* <h4>All Players </h4>
-            <p>{playerName}</p>
-           {goals}
-           <p>{assists}</p>
-            <button onClick={handleDelete}> Delete </button> */}
-            
+  <div class="col-sm-3">Actions: <button onClick={handleDelete}> Delete</button></div> */}
+          
+  <> Name: {playerName}</>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+  <>Goals: {goals}</>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <>Assists: {assists}</>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <> Actions:<button onClick={handleDelete}> Delete</button></>
+    </div>
+        </div> 
         </div>
     )
 }

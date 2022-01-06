@@ -40,6 +40,9 @@ export default function AddPlayer({setPlayers, teamToDisplay}) {
         setPlayers(playersOne => [...playersOne, data]);
     })
   }
+//   <div className='col-8 form-group mx-auto'>
+//                         <textarea className='form-control' id="" cols="30" rows="8"placeholder='Your message' name="message"/>
+//                     </div>
 
     return (
         <div>
@@ -50,10 +53,15 @@ export default function AddPlayer({setPlayers, teamToDisplay}) {
                 <input onChange={handleOnChange} value={formData.goals} type='number' name="goals"/>
                 <label> Assists: </label>{" "}
                 <input onChange={handleOnChange} value={formData.assists} type='number' name="assists"/>
-                <label> Progress:</label> {" "}
-                <input onChange={handleOnChange} value={formData.details} type='text' name="details"/>
-                <label> Clubs:</label> {" "}
+                 {/* <label> Progress:</label> {" "} 
+                 <input onChange={handleOnChange} value={formData.details} type='text' name="details"/> */}
+                <label> Clubs:</label> {" "} 
                 <input onChange={handleOnChange} value={formData.clubs} type='text' name="clubs"/>
+                <div className='col-6 form-group mx-auto'>
+                    <h6 className='pro'> {" "}</h6>
+                        <textarea onChange={handleOnChange} value={formData.details} className='form-control' id="" cols="30" rows="8"placeholder='player progression' name="details"/>
+                    </div>
+                {/* <input onChange={handleOnChange} value={formData.clubs} type='text' name="clubs"/> */}
                 <input type='submit' />
             </form>
         </div>

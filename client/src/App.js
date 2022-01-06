@@ -13,24 +13,17 @@ import SignUp from './SignUp';
 import Players from './Players';
 import { useEffect, useState } from 'react';
 import TeamContainer from './TeamContainer';
+import Staff from './Staff';
 
 export default function App() {
   const [user, setUser] = useState(false)
   const [teams, setTeams] = useState([])
-
-  // const [players, setPlayers] = useState([])
     
   useEffect(() => {
 fetch("/teams")
 .then(response => response.json()) 
 .then(data => setTeams(data))
 }, [])
-
-// useEffect(() => {
-//   fetch("/players")
-//   .then(response => response.json()) 
-//   .then(data => setPlayers(data))
-//   }, [])
 
   useEffect(() => {
     fetch("/me").then((r) => {
@@ -51,6 +44,7 @@ fetch("/teams")
         <Route path="/upcomingtrips" element={<UpcomingJoga />} />
       <Route path="/previoustrips" element={<PreviousTrips/>} />
       <Route path="/signedplayers" element={<SignedPlayer />} />
+      <Route path="/staff" element={<Staff />} />
       <Route path="/loginpage" element={<LoginPage setUser={setUser} />} />
       <Route path="/signup" element={<SignUp setUser={setUser}/>} />
       <Route path="/players" element={<Players />}/>

@@ -2,19 +2,19 @@
     position: absolute;
     top: -20px;
     left: 50%;
-    transform: translate(-50%,50%);
+    transform: translate(-40%,60%);
     margin: 0;
     padding: 0;
     color: rgb(190, 95, 95);
     font-family: sans-serif;
     letter-spacing: 2px;
     font-size: 6em;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: rgb(218, 213, 205);
     -webkit-text-stroke-width: 2px;
 }
 
 .joga {
-    margin-top: 18px;
+    margin-top: 37px;
     margin-left: 40px;
     padding: 10px;
 }
@@ -26,37 +26,7 @@
     background-color: white;
 } */
 
-.app-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 1rem;
-    border-collapse: collapse;
-  }
-  
-  .playerTable {
-    border-collapse: collapse; 
-    border-spacing: 15px; 
-    width: 100%;
-    background-color: white;
-    padding: 8px;
-  }
 
-  
-  th,
-  td {
-    padding: 10px;
-    font-size: 20px;
-    }
-  
-  th {
-    background-color: rgb(117, 201, 250);
-    
-  }
-  
-  td {
-    background-color: rgb(205, 235, 253);
-  }
   
   .TeamForm {
 transform: translate(10px, 70px);
@@ -78,8 +48,85 @@ transform: translate(10px, 70px);
     transform: translate(22px);
   }
 
-  /* .row {
-    padding: 2px; 
-    border-color: wheat;
-    border-style: solid;
-  } */
+  .row2 {
+    border-radius: 25px;
+    border: 1.5px solid #73AD21;
+    padding: 17px;
+
+  }
+.col-sm-3{
+  flex-direction: column;
+}
+
+  .tName{
+    font-style: italic;
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    padding: .3rem;
+    /* border-collapse: collapse; */
+  }
+  
+  .playerTable {
+    border-collapse: collapse; 
+    /* border-spacing: 1px;  */
+    width: 100%;
+    background-color: white;
+    /* padding: 4px; */
+  }
+
+  
+  th,
+  td {
+    padding: 10px;
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  
+  th {
+    background-color: rgb(117, 201, 250);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+  }
+  
+  td {
+    background-color: rgb(205, 235, 253);
+  }
+
+ .inquiry {
+  text-align: center;
+ }
+
+.inquiry2 {
+  text-align: center;
+}
+.inquiry3{
+  transform: translate(250px, 50px)
+}
+.stafftitle{
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  transform: translate(0px, 35px);
+}
+
+.card {
+  transform: translate(0px, 80px);
+
+}
+.about{
+  text-align: center;
+}
+
+.card-title1 {
+  text-align: center;
+}
+
+.topOfHome{
+  background-color: rgb(16, 12, 8);
+}
+/* .staff1{
+  transform: translate(200px,0px);
+} */

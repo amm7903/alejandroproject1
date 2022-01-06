@@ -12,16 +12,6 @@ useEffect(() => {
       .then(data => setPlayers(data))
      }, [])
 
-// function onUpdatePlayer(updatedPlayer){
-//     const updatedPlayer = players.map(
-//         player => {
-//             if (player.id === updatedPlayer.id) {
-//                 return updatedPlayer
-//             } else {return player}
-//         }
-//     )
-//     setPlayers(updatedPlayer)
-// }
 function onUpdatePlayer(updatedPlayer) {
     const updatedPlayers = players.map(
       playerOne => {
@@ -36,9 +26,21 @@ function onUpdatePlayer(updatedPlayer) {
   return (
      
         <div>
+          {/* <table className='app-container'>
+            <tr>
+              <th>Name</th>
+              <th>Goals</th>
+              <th>Assists</th>
+              <th>Previous Clubs</th>
+              <th>Current Team</th>
+              <th>Actions</th>
+            </tr>
+          <tbody> */}
 {players.map((player) => (
                 
                 <PlayerCard players={players} player={player} key={player.id} setPlayers={setPlayers} onUpdatePlayer={onUpdatePlayer} />
             ))}
+            {/* </tbody>
+            </table> */}
         </div>
         )}
