@@ -72,7 +72,7 @@ export default function PlayerCardTwo({player, player:{id, name, details, clubs,
             <td>{clubs}</td>
             <td>{details}</td>
             {teams.map(team => ( 
-                <td> {team.name}</td> 
+                <td key="team.id"> {team.name}</td> 
             ))}
             <td>
                 <button

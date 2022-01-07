@@ -26,21 +26,10 @@ function onUpdatePlayer(updatedPlayer) {
   return (
      
         <div>
-          {/* <table className='app-container'>
-            <tr>
-              <th>Name</th>
-              <th>Goals</th>
-              <th>Assists</th>
-              <th>Previous Clubs</th>
-              <th>Current Team</th>
-              <th>Actions</th>
-            </tr>
-          <tbody> */}
+        
 {players.map((player) => (
                 
                 <PlayerCard players={players} player={player} key={player.id} setPlayers={setPlayers} onUpdatePlayer={onUpdatePlayer} />
             ))}
-            {/* </tbody>
-            </table> */}
         </div>
         )}

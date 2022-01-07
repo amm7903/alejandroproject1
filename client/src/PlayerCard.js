@@ -6,8 +6,8 @@ import EditPlayer from './EditPlayer'
 
 export default function PlayerCard({player, setPlayers, players, onUpdatePlayer}) {
 //    const [teams, setTeams] = useState([])
-   const [statGoals,setStatGoals] = useState(player.goals)
-   const [statAssists, setStatAssists] = useState(player.assists)
+//    const [statGoals,setStatGoals] = useState(player.goals)
+//    const [statAssists, setStatAssists] = useState(player.assists)
 
    const [isEditing, setIsEditing] = useState(false)
    const [editForm, setEditForm] = useState({
@@ -41,21 +41,21 @@ export default function PlayerCard({player, setPlayers, players, onUpdatePlayer}
        setEditForm(filtered[0])
    }
 
-    function goalCounter(){
-        setStatGoals(statGoals + 1)
-    }
+    // function goalCounter(){
+    //     setStatGoals(statGoals + 1)
+    // }
 
-    function goalMinusCounter(){
-        setStatGoals(statGoals - 1)
-    }
+    // function goalMinusCounter(){
+    //     setStatGoals(statGoals - 1)
+    // }
 
-    function assistCounter(){
-        setStatAssists(statAssists + 1)
-    }
+    // function assistCounter(){
+    //     setStatAssists(statAssists + 1)
+    // }
 
-    function assistMinusCounter(){
-        setStatAssists(statAssists -1)
-    }
+    // function assistMinusCounter(){
+    //     setStatAssists(statAssists -1)
+    // }
 
     // useEffect(() => {
     //     fetch('/teams')
@@ -124,7 +124,7 @@ export default function PlayerCard({player, setPlayers, players, onUpdatePlayer}
 
 
 
-{/* <div className='app-container'>
+/* <div className='app-container'>
         <table>
             <thead>
                 <tr>
@@ -153,5 +153,5 @@ export default function PlayerCard({player, setPlayers, players, onUpdatePlayer}
         </table>
     </div>
     );
-}; */}
+}; */
             

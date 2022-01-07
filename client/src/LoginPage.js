@@ -41,10 +41,11 @@ export default function LoginPage({ setUser }) {
   }
 
   return (
-    <div>
+    <div className='login1'>
      {/* <Button>Test Button</Button> */}
       {/* <Button onClick={handleLogOut}> Logout </Button> */}
       <form onSubmit={handleSubmit}>
+        <div className='col-8 form-group mx-auto'>
         <p className="fs-1">Login</p>
         <label htmlFor="username">Username: </label> {" "}
         <input
@@ -54,6 +55,8 @@ export default function LoginPage({ setUser }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        </div>
+        <div className='col-8 form-group mx-auto'>
         <label htmlFor="password">Password:</label> {" "}
         <input
           type="password"
@@ -62,10 +65,12 @@ export default function LoginPage({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        </div>
+        <Button className='buttonlogin' variant="primary" type="submit">Login</Button>
       </form>
-      <p className="fs-1">Logout</p> {" "} 
-      <Button variant="secondary" onClick={handleLogOut}> Logout </Button>
+      <div className='col-8 form-group mx-auto'>
+      <Button className='buttonlogin2' variant="secondary" onClick={handleLogOut}> Logout </Button>
+      </div>
     </div>
   )
 }

@@ -6,13 +6,14 @@ export default function Mission() {
     
     return (
         <div className='missionpage'>
+            <div className='titlem'>
             <h1 className='titleMission'> Mission For Our Residency And Showcase Programs </h1>
-            <img className="missionpic1" src={mission1} height="500px" width="500px"/>
-
+            <img className="missionpic1" alt="mission" src={mission1} height="500px" width="500px"/>
+            </div>
 {/* About Joga */}
-            <div>
+            <div className='titlem2'>
             <h1 className='titleMission2'> The JOGA WAY </h1>
-            <img className="missionpic2" src={jogaway} height="550px" width="890px"/>
+            <img className="missionpic2" alt="jogaway" src={jogaway} height="550px" width="1000px"/>
 
             </div>
         </div>

@@ -21,12 +21,13 @@ export default function SignUp({setUser}) {
         }).then((r) => {
           if (r.ok) {
             r.json().then((user) => setUser(user));
+            alert("Sign in Successful")
           }
         });
         }
     
     return (
-        <div>
+        <div className='signup'>
             <form onSubmit={handleSubmit}>
             <p className="fs-1">Sign up</p>
         <label htmlFor="username">Username:</label> {""}

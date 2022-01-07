@@ -13,11 +13,11 @@ export default function SignedPlayer() {
 
             {/* images */}
             <div className='signedimages'>
-            <img src={signed1} height="300px" width="900px"/>
-            <img src={signed2} height="300px" width="900px"/>
-            <img src={signed3} height="300px" width="900px"/>
-            <img className='gabriel' src={signed4} height="300px" width="900px"/>
-            <img className="leland" src={signed5} height="300px" width="900px"/>
+            <img src={signed1} alt="pic1" height="300px" width="900px" /> <br/>
+            <img src={signed2} alt="pic2" height="300px" width="900px"/> <br/>
+            <img src={signed3} alt="pic3"height="300px" width="900px"/> <br/>
+            <img className='gabriel' alt="pic4" src={signed4} height="300px" width="900px"/><br/>
+            <img className="leland" alt="pic5" src={signed5} height="300px" width="900px"/>
 
 
             </div>

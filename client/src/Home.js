@@ -1,19 +1,20 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';    
 import img2 from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/jogapic-modified.png'
-import img3 from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/proplayer1.png'
-import img4 from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/teampic.png'
+// import img3 from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/proplayer1.png'
+// import img4 from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/teampic.png'
 import team from '/Users/alejandromarcano/Development/code/Mod5/project1/ale-project-1/client/src/images/teampic2.png'
 export default function Home() {
     return (
         <div>
           <div className='topOfHome'>
             <h1 className='title'> JOGA AMSTERDAM</h1>
-      <img className='joga' src={img2} alt="image1" height="250px" width="250px"/>
-      
+            <div className='joga'>
+      <img src={img2} alt="image1" height="250px" width="250px"/>
+      </div>
       {/* About section/ end of header*/}
-        <div class="card">
-          <div class="card-header">
+        <div className="card">
+          <div className="card-header">
           <h1 className='about'> ELITE INTERNATIONAL FOOTBALL ACADEMY </h1> 
           </div>
         </div>
@@ -21,7 +22,7 @@ export default function Home() {
 
       {/* new section team picture */}
       <div className='teampic'>
-      <img src={team} class="img-fluid" alt="img-fluid" height="50px" width="800px"/>
+      <img src={team} className="img-fluid" alt="img-fluid" height="50px" width="800px"/>
       </div>
 
 
@@ -72,10 +73,10 @@ export default function Home() {
 // </div>
 // </div>
 
-{/* <div class="card-body">
+/* <div class="card-body">
             <h5 class="card-title1">Joga Foundation </h5>
             <p class="card-text">Joga Amsterdam started in the year 2011 in Washington D.C. with the goal of exposing American children to soccer culture.
             Since then, Joga has provided American players with the opportunity to sign professional soccer contracts in Europe through friendlies,
             tournaments, and the JOGA residency program.  </p>
             
-          </div> */}
+          </div> */

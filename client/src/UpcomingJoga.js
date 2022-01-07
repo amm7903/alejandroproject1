@@ -19,9 +19,9 @@ export default function UpcomingJoga() {
       }; 
     
     return (
-        <div>
+        <div className="inq">
             <h1 className="inquiry">Inquiry Form</h1>
-            <p className="inquiry2"> Send us an email if you are interested in any of our programs</p>
+            <p className="inquiry2"> Send us an email if you are interested in joining us for future JOGA Showcases or our Residency Programs</p>
             <div className='email'>
             <form onSubmit={sendEmail}>
                 <div className='row pt-5 mx-auto'>

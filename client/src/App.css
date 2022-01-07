@@ -1,11 +1,13 @@
 .title {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translate(-40%,60%);
-    margin: 0;
-    padding: 0;
+    /* position: absolute; */
+    /* top: -20px;
+    left: 50%; */
+    /* transform: translate(-40%,60%); */
+    text-align: center;
+    /* margin: 0;
+    padding: 0; */
     color: rgb(190, 95, 95);
+    transform: translate(0px,150px);
     /* font-family: sans-serif; */
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: 2px;
@@ -15,9 +17,10 @@
 }
 
 .joga {
-    margin-top: 37px;
+    /* margin-top: 37px;
     margin-left: 40px;
-    padding: 10px;
+    padding: 10px; */
+    transform: translate(0px, -30px);
 }
 
 /* .intro {
@@ -53,7 +56,6 @@ transform: translate(10px, 70px);
     border-radius: 25px;
     border: 1.5px solid #73AD21;
     padding: 17px;
-
   }
 .col-sm-3{
   flex-direction: column;
@@ -119,6 +121,7 @@ transform: translate(10px, 70px);
 }
 .about{
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .card-title1 {
@@ -135,31 +138,32 @@ transform: translate(10px, 70px);
   transform: translate(50px);
 } */
 .teampic {
-  transform: translate(300px, 100px);
+  /* transform: translate(300px, 100px); */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  transform: translate(0px, 90px)
 }
 .signed {
-  margin: auto 10px;
+  /* margin: auto 10px; */
     width: auto;
-    height: 2000px;
+    /* height: 1300px; */
+    height: auto;
+    text-align: center;
+    /* transform: translate(0px, 70px); */
+    
     background-color: rgb(0, 0, 0);
 }
 
 .signedtitle1{
   text-align: center;
   font-family:'Times New Roman', Times, serif;
-  transform: translate(0px, 35px);
-  color: rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(253, 253, 253);
+  
 }
 
-.signedimages{
-  transform: translate(250px, 50px);
-}
-.leland{
-  transform: translate(0px, 50px);
-}
-.gabriel{
-  transform: translate(0px, 30px);
-}
+
 .missionpage {
   margin: auto 10px;
     width: auto;
@@ -167,20 +171,52 @@ transform: translate(10px, 70px);
     background-color: rgb(0, 0, 0);
 }
 .missionpic1{
-  transform: translate(450px, 5px);
+  transform: translate(0px, 40px);
+
 }
 
-.titleMission{
+/* .titleMission{
   color: white;
+  text-align: center;
   transform: translate(300px, 5px);
+  font-family: 'Times New Roman', Times, serif;
+} */
+
+.titlem{
+  text-align: center;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+.titlem2 {
+  text-align: center;
+  color: white;
+  transform: translate(0px, 90px);
   font-family: 'Times New Roman', Times, serif;
 }
 
-.titleMission2{
+/* .titleMission2{
   color: white;
   transform: translate(550px, 70px);
+  text-align: center;
   font-family: 'Times New Roman', Times, serif;
 }
 .missionpic2{
   transform: translate(400px, 55px);
+} */
+.login1 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.buttonlogin {
+  transform: translate(0px, 10px);
+}
+.buttonlogin2 {
+  transform: translate(0px, 14px);
+}
+.signup {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.inq {
+  font-family: 'Times New Roman', Times, serif;
 }

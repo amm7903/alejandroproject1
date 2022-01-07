@@ -1,7 +1,6 @@
 import React from 'react'
 import { Outlet,Link } from "react-router-dom";
 import { Navbar } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom';
 
 export default function NavBar({user}) {
  
